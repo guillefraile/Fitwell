@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-lime-fw: #d9ff00;
+  --color-dark-fw: #1a1a1a;
+  --color-black-fw: #000000;
+  --color-card-fw: #111111;
+  --color-input-fw: #0d0d0d;
+  --font-barlow: "Barlow Condensed", sans-serif;
+  --font-barlow-body: "Barlow", sans-serif;
+}
