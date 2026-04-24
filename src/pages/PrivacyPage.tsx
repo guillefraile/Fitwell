@@ -1,5 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Rrenderiza el marco legal de privacidad de la aplicación.
+ * Se añade para cumplir con la normativa europea (RGPD).
+ */
+
 export default function PrivacyPage() {
   const navigate = useNavigate();
 
@@ -8,11 +13,12 @@ export default function PrivacyPage() {
       {/* NAVBAR */}
       <nav className="bg-black-fw border-b border-white/5 px-6 lg:px-12 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="/isotipo.png" alt="Fitwell" className="w-8 h-8" />
+          <img src="/favicon.svg" alt="Fitwell" className="w-8 h-8" />
           <span className="text-lime-fw font-barlow font-extrabold text-lg tracking-widest uppercase">
             FITWELL
           </span>
         </div>
+        {/* Navegación histórica: permite al usuario volver exactamente a donde estaba antes */}
         <button
           onClick={() => navigate(-1)}
           className="text-white/30 hover:text-white font-barlow font-bold text-[12px] tracking-[0.15em] uppercase transition-colors"
@@ -21,6 +27,7 @@ export default function PrivacyPage() {
         </button>
       </nav>
 
+      {/* CONTENIDO LEGAL */}
       <div className="max-w-2xl mx-auto px-6 py-12">
         <p className="text-lime-fw font-barlow font-bold text-[11px] tracking-[0.25em] uppercase mb-3">
           LEGAL

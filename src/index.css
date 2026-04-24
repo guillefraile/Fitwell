@@ -1,13 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap");
+/* IMPORTACIÓN DE TIPOGRAFÍAS (Google Fonts) */
 
 @import "tailwindcss";
 
+/**
+ * DEFINICIÓN DEL TEMA PERSONALIZADO
+ */
 @theme {
-  --color-lime-fw: #d9ff00;
-  --color-dark-fw: #1a1a1a;
-  --color-black-fw: #000000;
-  --color-card-fw: #111111;
-  --color-input-fw: #0d0d0d;
-  --font-barlow: "Barlow Condensed", sans-serif;
-  --font-barlow-body: "Barlow", sans-serif;
+  /* COLORES DE MARCA */
+  --color-lime-fw: #d9ff00; /* Verde Lima */
+  --color-dark-fw: #1a1a1a; /* Fondo principal oscuro */
+  --color-black-fw: #000000; /* Negro puro */
+  --color-card-fw: #111111; /* Color de tarjetas más claro que el fondo. */
+  --color-input-fw: #0d0d0d; /* Color de los inputs */
+
+  /* TIPOGRAFÍAS PERSONALIZADAS */
+  --font-barlow:
+    "Barlow Condensed", sans-serif; /*  Para títulos y elementos de impacto */
+  --font-barlow-body: "Barlow", sans-serif; /* Para los demás textos */
 }
