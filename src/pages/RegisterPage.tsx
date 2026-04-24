@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
-import { useAuth } from "../context/AuthContext";
 
 /**
  * Encargada de la creación de nuevos usuarios. Incluye validaciones de seguridad,
@@ -9,7 +8,6 @@ import { useAuth } from "../context/AuthContext";
  */
 export default function RegisterPage() {
   const navigate = useNavigate();
-  const { session } = useAuth();
 
   // Estados locales para capturar los datos del nuevo usuario
   const [email, setEmail] = useState("");
@@ -18,17 +16,6 @@ export default function RegisterPage() {
   const [rgpd, setRgpd] = useState(false); // Estado para el Checkbox legal
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
-  /**
-   * Protección de ruta
-   * Si un usuario ya logueado intenta entrar a /register,
-   * lo redirigimos automáticamente al Dashboard.
-   */
-  useEffect(() => {
-    if (session) {
-      navigate("/dashboard", { replace: true });
-    }
-  }, [session, navigate]);
 
   /**
    * Lógica principal de registro con validaciones previas a la llamada de API.
@@ -79,7 +66,7 @@ export default function RegisterPage() {
     /**
      * Tras el registro, enviamos al usuario a completar su perfil.
      */
-    navigate("/profile");
+    navigate("/profile", { replace: true });
   };
 
   /**
