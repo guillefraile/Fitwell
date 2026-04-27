@@ -5,7 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 
 /**
  * VARIABLES DE ENTORNO:
- * Utilizamos 'import.meta.env' (propio de Vite) para leer las credenciales y no harcodearlas.
+ * Utilizamos 'import.meta.env' para leer las credenciales y no harcodearlas.
  */
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
