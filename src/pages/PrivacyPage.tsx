@@ -122,7 +122,7 @@ export default function PrivacyPage() {
 
           <div className="h-px bg-white/5" />
 
-          <p className="text-white/20 text-xs">
+          <p className="text-white/40 text-xs">
             Última actualización: abril de 2026
           </p>
         </div>

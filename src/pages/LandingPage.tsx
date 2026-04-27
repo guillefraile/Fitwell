@@ -105,7 +105,7 @@ export default function LandingPage() {
             >
               EMPEZAR AHORA
             </Link>
-            <p className="text-white/20 font-barlow text-[10px] tracking-[0.2em] uppercase">
+            <p className="text-white/40 font-barlow text-[10px] tracking-[0.2em] uppercase">
               POWERED BY GEMINI ®
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function LandingPage() {
           >
             EMPEZAR AHORA
           </Link>
-          <p className="text-white/20 font-barlow text-[10px] tracking-[0.2em] uppercase">
+          <p className="text-white/40 font-barlow text-[10px] tracking-[0.2em] uppercase">
             POWERED BY GEMINI ®
           </p>
         </div>
@@ -157,21 +157,21 @@ export default function LandingPage() {
       {/* FOOTER: Información y enlaces legales. */}
       <footer className="px-6 lg:px-12 py-6 border-t border-white/5 bg-black-fw flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <img src="/favicon.svg" alt="" className="w-5 h-5 opacity-30" />
-          <span className="text-white/20 font-barlow text-[11px] tracking-widest uppercase">
+          <img src="/favicon.svg" alt="" className="w-5 h-5 opacity-80" />
+          <span className="text-white/40 font-barlow text-[11px] tracking-widest uppercase">
             FITWELL © 2026
           </span>
         </div>
         <div className="flex gap-6">
           <Link
             to="/terms"
-            className="text-white/20 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
+            className="text-white/40 hover:text-white/60 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
           >
             TÉRMINOS
           </Link>
           <Link
             to="/privacy"
-            className="text-white/20 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
+            className="text-white/40 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
           >
             PRIVACIDAD
           </Link>

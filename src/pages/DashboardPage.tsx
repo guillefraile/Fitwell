@@ -111,7 +111,7 @@ export default function DashboardPage() {
               {user?.email}
             </span>
             <span
-              className={`text-white/30 text-xs transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
+              className={`text-white/40 text-xs transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
             >
               ▼
             </span>
@@ -120,7 +120,7 @@ export default function DashboardPage() {
           {menuOpen && (
             <div className="absolute right-0 top-12 w-56 bg-card-fw border border-white/10 z-50 shadow-2xl">
               <div className="px-4 py-3 border-b border-white/5">
-                <p className="text-white/25 font-barlow text-[10px] tracking-[0.2em] uppercase mb-0.5">
+                <p className="text-white/40 font-barlow text-[10px] tracking-[0.2em] uppercase mb-0.5">
                   SESIÓN ACTIVA
                 </p>
                 <p className="text-white/60 font-barlow-body text-xs truncate">
@@ -165,7 +165,7 @@ export default function DashboardPage() {
         <h1 className="text-white font-barlow font-extrabold text-4xl lg:text-5xl uppercase tracking-tight leading-none">
           HOLA, <span className="text-lime-fw">{profileName || "USUARIO"}</span>
         </h1>
-        <p className="text-white/30 font-barlow-body text-sm mt-3">
+        <p className="text-white/40 font-barlow-body text-sm mt-3">
           ¿Qué trabajamos hoy?
         </p>
       </div>
@@ -214,20 +214,20 @@ export default function DashboardPage() {
       <footer className="px-6 lg:px-12 py-6 border-t border-white/5 flex items-center justify-between mt-auto">
         <div className="flex items-center gap-2">
           <img src="/favicon.svg" alt="" className="w-5 h-5 opacity-30" />
-          <span className="text-white/20 font-barlow text-[11px] tracking-[0.15em] uppercase">
+          <span className="text-white/40 font-barlow text-[11px] tracking-[0.15em] uppercase">
             FITWELL © 2026
           </span>
         </div>
         <div className="flex gap-6">
           <Link
             to="/terms"
-            className="text-white/20 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
+            className="text-white/40 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
           >
             TÉRMINOS
           </Link>
           <Link
             to="/privacy"
-            className="text-white/20 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
+            className="text-white/40 hover:text-white/40 font-barlow text-[11px] tracking-[0.12em] uppercase transition-colors"
           >
             PRIVACIDAD
           </Link>
