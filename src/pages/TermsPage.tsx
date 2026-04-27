@@ -11,7 +11,7 @@ export default function TermsPage() {
       {/* NAVBAR */}
       <nav className="bg-black-fw border-b border-white/5 px-6 lg:px-12 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="/isotipo.png" alt="Fitwell" className="w-8 h-8" />
+          <img src="/favicon.svg" alt="Fitwell" className="w-8 h-8" />
           <span className="text-lime-fw font-barlow font-extrabold text-lg tracking-widest uppercase">
             FITWELL
           </span>
