@@ -19,7 +19,7 @@ export default function TermsPage() {
         {/* Navegación histórica: permite al usuario volver exactamente a donde estaba antes */}
         <button
           onClick={() => navigate(-1)}
-          className="text-white/30 hover:text-white font-barlow font-bold text-[12px] tracking-[0.15em] uppercase transition-colors"
+          className="text-white/60 hover:text-white font-barlow font-bold text-[12px] tracking-[0.15em] uppercase transition-colors"
         >
           ← VOLVER
         </button>
