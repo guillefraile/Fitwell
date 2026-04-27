@@ -7,6 +7,7 @@ import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import HealthPage from "./pages/HealthPage";
 
 /**
  * Define el sistema de enrutamiento de la aplicación Fitwell.
@@ -36,6 +37,15 @@ export default function App() {
         element={
           <ProtectedRoute>
             <ProfilePage />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/health"
+        element={
+          <ProtectedRoute>
+            <HealthPage />
           </ProtectedRoute>
         }
       />
