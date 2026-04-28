@@ -59,10 +59,10 @@ export default function LandingPage() {
             FITWELL
           </span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Link
             to="/login"
-            className="text-white/50 hover:text-white font-barlow font-bold text-[12px] tracking-[0.15em] uppercase transition-colors border border-white/10 hover:border-white/30 px-5 py-2"
+            className="text-white/50 hover:text-white font-barlow font-bold text-[10px] tracking-[0.15em] uppercase transition-colors border border-white/10 hover:border-white/30 px-5 py-2"
           >
             INICIAR SESIÓN
           </Link>
