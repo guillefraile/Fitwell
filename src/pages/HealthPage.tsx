@@ -166,7 +166,7 @@ export default function HealthPage() {
         w-full bg-input-fw border border-white/10 text-white
         px-4 py-3.5 text-sm font-barlow-body outline-none
         focus:border-lime-fw transition-colors duration-200
-        placeholder:text-white/20
+        placeholder:text-white/40
     `;
   const labelClass = `
         block font-barlow font-bold text-[11px] tracking-[0.2em]
@@ -319,7 +319,7 @@ export default function HealthPage() {
             )}
           </div>
 
-          <p className="text-white/30 font-barlow-body text-xs mt-3 leading-relaxed">
+          <p className="text-white/40 font-barlow-body text-xs mt-3 leading-relaxed">
             Fórmula Harris-Benedict revisada. El TDEE incluye el factor de
             actividad seleccionado. Estos valores son orientativos, y usted
             debería consultar a un profesional de la salud para datos más
@@ -368,7 +368,7 @@ export default function HealthPage() {
             {/* VISUALIZACIÓN DE RESULTADOS DE SUEÑO (Horarios de despertar) */}
             {wakeOptions.length > 0 && (
               <div className="flex flex-col gap-2 mt-2">
-                <p className="text-white/30 font-barlow text-[10px] tracking-[0.2em] uppercase mb-1">
+                <p className="text-white/40 font-barlow text-[10px] tracking-[0.2em] uppercase mb-1">
                   DESPIÉRTATE A LAS
                 </p>
                 {wakeOptions.map((time, i) => (
@@ -398,7 +398,7 @@ export default function HealthPage() {
             )}
           </div>
 
-          <p className="text-white/30 font-barlow-body text-xs mt-3 leading-relaxed">
+          <p className="text-white/40 font-barlow-body text-xs mt-3 leading-relaxed">
             Los ciclos de sueño son secuencias repetitivas de fases (ligero,
             profundo y REM) que duran aproximadamente 90 minutos cada uno. Un
             adulto debería de completar entre 4 a 6 ciclos por noche para un

@@ -77,7 +77,7 @@ export default function RegisterPage() {
     w-full bg-input-fw border border-white/10 text-white
     px-4 py-3.5 text-sm font-barlow-body outline-none
     focus:border-lime-fw transition-colors duration-200
-    placeholder:text-white/20
+    placeholder:text-white/40
   `;
 
   const labelClass = `
@@ -97,7 +97,7 @@ export default function RegisterPage() {
         </div>
 
         <div>
-          <p className="text-white/25 text-[13px] tracking-[0.25em] uppercase mb-4 font-barlow">
+          <p className="text-white/40 text-[13px] tracking-[0.25em] uppercase mb-4 font-barlow">
             POWERED BY GEMINI AI ® SERVICES
           </p>
           <h2 className="text-white font-barlow font-extrabold text-7xl uppercase leading-[1.05] tracking-tight">
@@ -144,7 +144,7 @@ export default function RegisterPage() {
           <div>
             <label className={labelClass}>
               CONTRASEÑA{" "}
-              <span className="text-white/20 normal-case font-normal tracking-normal">
+              <span className="text-white/40 normal-case font-normal tracking-normal">
                 — mín. 12 caracteres
               </span>
             </label>
@@ -180,7 +180,7 @@ export default function RegisterPage() {
             />
             <label
               htmlFor="rgpd"
-              className="text-white/35 font-barlow-body text-xs leading-relaxed cursor-pointer"
+              className="text-white/40 font-barlow-body text-xs leading-relaxed cursor-pointer"
             >
               He leído y acepto la{" "}
               <Link
@@ -204,7 +204,7 @@ export default function RegisterPage() {
               font-barlow font-extrabold text-[15px] tracking-[0.15em] uppercase
               py-4 transition-all duration-200
               hover:bg-lime-fw/85 active:scale-[0.99]
-              disabled:bg-lime-fw/20 disabled:text-white/20 disabled:cursor-not-allowed
+              disabled:bg-lime-fw/20 disabled:text-white/40 disabled:cursor-not-allowed
             "
           >
             {loading ? "CREANDO CUENTA..." : "CREAR CUENTA →"}
@@ -214,7 +214,7 @@ export default function RegisterPage() {
         <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent my-8" />
 
         {/* Link para volver a login */}
-        <p className="text-center text-white/35 font-barlow-body text-sm">
+        <p className="text-center text-white/40 font-barlow-body text-sm">
           ¿Ya tienes cuenta?{" "}
           <Link
             to="/login"

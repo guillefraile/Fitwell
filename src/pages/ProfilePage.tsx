@@ -138,7 +138,7 @@ export default function ProfilePage() {
     "?";
 
   // CLASES TAILWIND REUTILIZABLES (Limpieza de código)
-  const inputClass = `w-full bg-input-fw border border-white/10 text-white px-4 py-3.5 text-sm font-barlow-body outline-none focus:border-lime-fw transition-colors duration-200 placeholder:text-white/20`;
+  const inputClass = `w-full bg-input-fw border border-white/10 text-white px-4 py-3.5 text-sm font-barlow-body outline-none focus:border-lime-fw transition-colors duration-200 placeholder:text-white/40`;
   const labelClass = `block font-barlow font-bold text-[11px] tracking-[0.2em] uppercase text-white/40 mb-2`;
   const selectClass = `${inputClass} appearance-none cursor-pointer`;
 
@@ -146,7 +146,7 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-dark-fw flex items-center justify-center">
-        <p className="text-white/30 font-barlow tracking-[0.2em] uppercase text-sm animate-pulse">
+        <p className="text-white/40 font-barlow tracking-[0.2em] uppercase text-sm animate-pulse">
           CARGANDO...
         </p>
       </div>
@@ -178,7 +178,7 @@ export default function ProfilePage() {
             <h1 className="text-white font-barlow font-extrabold text-3xl uppercase tracking-tight leading-none">
               {profile.full_name || "MI PERFIL"}
             </h1>
-            <p className="text-white/25 font-barlow-body text-xs mt-1">
+            <p className="text-white/40 font-barlow-body text-xs mt-1">
               {user?.email}
             </p>
           </div>
