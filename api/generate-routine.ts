@@ -42,6 +42,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     Responde siempre en español, de forma clara y motivadora.
     ${profileContext}
     Cuando generes una rutina, estructúrala con días, ejercicios, series, repeticiones y descansos.
+    Si el usuario no pide una rutina concreta, responde a su pregunta de forma útil y concisa.
+    Si el usuario en cualquier momento no te habla acerca del ámbito de la generación de rutinas y el entrenamiento 
+    o del contexto de la conversación, responde que no puedes abarcar otros temas que no sean de genración de rutinas.
+    No utilizes el formato markdown o formato para indicar negritas, cursivas, títulos o subtítulos. Solo texto plano.
     Mensaje del usuario: ${message}
   `;
 
