@@ -5,6 +5,16 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method === "GET") {
+    return res.status(200).json({
+      status: "online",
+      message: "🤖 ¡El entrenador FitCoach está en línea y listo!",
+      instructions:
+        "Para empezar a chatear con la IA y generar tus rutinas, dirígete a la sección de entrenamiento.",
+      link: "/workout",
+    });
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método no permitido" });
   }
