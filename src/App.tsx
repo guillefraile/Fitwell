@@ -8,6 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import HealthPage from "./pages/HealthPage";
+import WorkoutPage from "./pages/WorkoutPage";
 
 /**
  * Define el sistema de enrutamiento de la aplicación Fitwell.
@@ -31,7 +32,6 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-
       <Route
         path="/profile"
         element={
@@ -40,7 +40,6 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-
       <Route
         path="/health"
         element={
@@ -49,7 +48,14 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-
+      <Route
+        path="/workout"
+        element={
+          <ProtectedRoute>
+            <WorkoutPage />
+          </ProtectedRoute>
+        }
+      />
       {/* MANEJO DE RUTAS NO EXISTENTES: 
         Si un usario cambia la url o intenta ir a una ruta que no existe,
         lo redirigimos a la raíz para mantener al usuario dentro del flujo.*/}
