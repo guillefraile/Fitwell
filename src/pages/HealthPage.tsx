@@ -146,9 +146,22 @@ export default function HealthPage() {
     const h = parseFloat(height);
     const a = parseFloat(age);
 
-    // Validación básica de números positivos
-    if (!w || !h || !a || w <= 0 || h <= 0 || a <= 0) return;
-
+    // Validaciones
+    if (!w || !h || !a) {
+      return;
+    }
+    if (w < 20 || w > 300) {
+      alert("El peso debe estar entre 20 y 300 kg");
+      return;
+    }
+    if (h < 50 || h > 250) {
+      alert("La altura debe estar entre 50 y 250 cm");
+      return;
+    }
+    if (a < 10 || a > 120) {
+      alert("La edad debe estar entre 10 y 120 años");
+      return;
+    }
     const base = calcTMB(w, h, a, gender);
     setTmb(Math.round(base));
     setTdee(Math.round(base * ACTIVITY_MULTIPLIERS[activity]));
@@ -225,7 +238,8 @@ export default function HealthPage() {
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
                   placeholder="70"
-                  min="0"
+                  min="20"
+                  max="300"
                 />
               </div>
               <div>
@@ -236,7 +250,8 @@ export default function HealthPage() {
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder="175"
-                  min="0"
+                  min="50"
+                  max="250"
                 />
               </div>
             </div>
@@ -251,7 +266,8 @@ export default function HealthPage() {
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
                   placeholder="25"
-                  min="0"
+                  min="10"
+                  max="120"
                 />
               </div>
               <div>
