@@ -102,9 +102,43 @@ export default function ProfilePage() {
     }
 
     // Validaciones numéricas adicionales
-    if (Number(height) <= 0 || Number(weight_initial) <= 0) {
-      setError("La altura y el peso deben ser valores positivos");
+    // Nombre
+    if (!profile.full_name.trim()) {
+      setError("El nombre no puede estar vacío");
       return;
+    }
+    if (profile.full_name.trim().length > 50) {
+      setError("El nombre no puede superar los 50 caracteres");
+      return;
+    }
+
+    // Fecha de nacimiento
+    if (profile.birth_date) {
+      const birth = new Date(profile.birth_date);
+      const today = new Date();
+      const age = today.getFullYear() - birth.getFullYear();
+      if (age < 10 || age > 120) {
+        setError("Introduce una fecha de nacimiento válida");
+        return;
+      }
+    }
+
+    // Altura
+    if (profile.height) {
+      const h = Number(profile.height);
+      if (h < 50 || h > 250) {
+        setError("La altura debe estar entre 50 y 250 cm");
+        return;
+      }
+    }
+
+    // Peso
+    if (profile.weight_initial) {
+      const w = Number(profile.weight_initial);
+      if (w < 20 || w > 300) {
+        setError("El peso debe estar entre 20 y 300 kg");
+        return;
+      }
     }
 
     setSaving(true);
@@ -214,6 +248,7 @@ export default function ProfilePage() {
                     setProfile((p) => ({ ...p, full_name: e.target.value }))
                   }
                   placeholder="Tu nombre"
+                  maxLength={50}
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -264,6 +299,8 @@ export default function ProfilePage() {
                       setProfile((p) => ({ ...p, height: e.target.value }))
                     }
                     placeholder="175"
+                    min="50"
+                    max="250"
                   />
                 </div>
                 <div>
@@ -279,6 +316,8 @@ export default function ProfilePage() {
                       }))
                     }
                     placeholder="70"
+                    min="20"
+                    max="300"
                   />
                 </div>
               </div>
