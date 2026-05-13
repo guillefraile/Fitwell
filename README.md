@@ -44,11 +44,11 @@ El objetivo de Fitwell es unificar en un único ecosistema los cuatro pilares de
 - 🌐 **Landing page** — Página de presentación pública con propuesta de valor
 - 📄 **Páginas legales** — Términos de uso y política de privacidad (RGPD)
 - 📱 **Diseño responsive** — Adaptado a móvil y escritorio
+- ⚡ **Generación de rutinas deportivas con IA (Google Gemini)** - Diseñadas de manera completamente personalizada a las necesidades del usuario
+- 🥗 **Análisis nutricional por foto (visión multimodal)** - Subida de fotos de platos con comida, para su posterior análisis
 
 ### 🔜 Próximamente
 
-- ⚡ Generación de rutinas deportivas con IA (Google Gemini)
-- 🥗 Análisis nutricional por foto (visión multimodal)
 - 😊 Monitor de estado de ánimo diario
 - 💬 Frases motivadoras generadas por IA
 
@@ -77,8 +77,9 @@ El objetivo de Fitwell es unificar en un único ecosistema los cuatro pilares de
 
 ```
 fitwell/
-├── api/                        # (próximamente) Vercel Serverless Functions (backend)
-│   └── generate-routine.ts     # (próximamente) Endpoint para Gemini
+├── api/                        # Vercel Serverless Functions (backend)
+│   └── generate-routine.ts     # Endpoints y promp para la generación de rutinas (devolución de JSON)
+│   └── analyze-food.ts         # Endpoints y promp para el análisis de comidas (devolución de JSON)
 │
 ├── public/
 │   └── favicon.svg             # Logo de la aplicación
@@ -97,6 +98,8 @@ fitwell/
 │   │   ├── DashboardPage.tsx   # Panel principal autenticado
 │   │   ├── ProfilePage.tsx     # Gestión de perfil y métricas
 │   │   ├── HealthPage.tsx      # Calculadoras TMB y sueño
+│   │   ├── NutritionPage.tsx   # Análisis IA de platos con comida
+│   │   ├── WorkoutPage.tsx     # Chat de generación de rutinas deportidas con IA
 │   │   ├── TermsPage.tsx       # Términos de uso
 │   │   └── PrivacyPage.tsx     # Política de privacidad (RGPD)
 │   │
