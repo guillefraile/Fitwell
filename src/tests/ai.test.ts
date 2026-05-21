@@ -1,8 +1,8 @@
 // Mock del fetch global y utilidades de streaming
 
 // Reemplazamos el fetch nativo por un mock de Jest para simular llamadas HTTP sin servidor real
-global.fetch = jest.fn();
-const mockFetch = fetch as jest.Mock;
+const mockFetch = jest.fn();
+globalThis.fetch = mockFetch as unknown as typeof fetch;
 
 // Construye una respuesta HTTP simulada en formato Server-Sent Events (SSE)
 // - chunks: array de strings que se enviarán como eventos "data:" individuales
