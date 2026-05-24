@@ -106,6 +106,11 @@ fitwell/
 │   ├── services/
 │   │   └── supabaseClient.ts   # Configuración del cliente de Supabase
 │   │
+│   ├── tests/
+│   │   ├── auth.test.ts
+│   │   ├── calculators.test.ts
+│   │   └── ai.test.ts
+│   │ 
 │   ├── App.tsx                 # Enrutador principal
 │   ├── main.tsx                # Punto de entrada
 │   └── index.css               # Tailwind + tema personalizado (@theme)
